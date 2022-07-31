@@ -1,7 +1,7 @@
 ---
 title: "MiniAOD triggering"
 teaching: 0
-exercises: 20
+exercises: 25
 questions:
 - "How can I access trigger information from miniAOD files?"
 - "What are trigger objects?"

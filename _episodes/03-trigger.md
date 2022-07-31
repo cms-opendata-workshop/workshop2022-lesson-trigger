@@ -1,7 +1,7 @@
 ---
 title: "Triggering with HLT Providers"
 teaching: 0
-exercises: 20
+exercises: 25
 questions:
 - "Why might I need to access the DB conditions for trigger studies?"
 - "What are the HLTConfigProvider and HLTPrescaleProvider classes?"
