@@ -1,13 +1,16 @@
 ---
 title: "MiniAOD triggering"
-teaching: 10
-exercises: 0
+teaching: 0
+exercises: 20
 questions:
-- "blah"
+- "How can I access trigger information from miniAOD files?"
+- "What are trigger objects?"
 objectives:
-- "blah"
+- "Learn how one can retrieve trigger information like pass/fail bits or prescales from miniAOD files"
+- "Learn what trigger objects are and why they are important"
 keypoints:
-- "blah"
+- "It is possible to retrieve trigger information from miniAOD files directly"
+- "Trigger objects should be check against reconstructed objects"
 ---
 
 ## Introduction
@@ -452,6 +455,7 @@ std::cout << "\n === TRIGGER OBJECTS === " << std::endl;
 ![](../fig/triggerpath.png)
 
 
+Finally, note that we are not writing any information into our `myoutput.root` file.  You are welcome to work with us if you would like to help us implement this in the `2015` version of POET.
 
 {% include links.md %}
 
