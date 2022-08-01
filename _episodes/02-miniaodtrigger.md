@@ -30,7 +30,7 @@ docker start -i my_od #use the name you gave to yours
 
 Make sure you are at the `/code/CMSSW_7_6_7/src/PhysObjectExtractorTool/PhysObjectExtractor` level, i.e., inside **your poet repository from previous lessons**.
 
-Now, we will check out the version of POET for this lesson, which is the same as the one we have used to **pre-process** the data we will be using later.  `git stash` any lingering modifications you may have done from previous exercises.  We will start fresh:
+Now, we will check out the version of POET for this lesson, which is the same as the one we have used to **pre-process** the data we will be using later.  `git stash` any lingering modifications or simply do `git checkout .` (note the dot) to reset to the original status of this version.  We will start fresh with a new version, this is the version we use to produce the skmmed datasets with which we will be working tomorrow:
 
 ~~~
 git checkout odws2022-ttbaljets-prod
@@ -45,12 +45,12 @@ cmsRun python/poet_cfg.py True
 ~~~
 {: .language-bash}
 
-Like in the previous lessons, you should see a new `myoutput.root`files emerging.  Let's not worry about it for now, just make sure it is newly produced.
+Like in the previous lessons, you should see a new `myoutput.root` files emerging.  Let's not worry about it for now, just make sure it is newly produced.
 
 If you look at the `src` directory:
 
 ~~~
-ls `src`
+ls src
 ~~~
 {: .language-bash}
 
@@ -63,7 +63,7 @@ GenParticleAnalyzer.cc  MiniAODTriggerAnalyzer.cc  SimpleEleMuFilter.cc  TriggOb
 ~~~
 {: .output}
 
-Let's not worry about those right now (we will check them out later) and pretend there is no analyzer related to extracting the trigger information at hand.  In fact we do not have an analyzer (yet) that can do what we are about to do: to extract the trigger information directly from the dataset files.  Just for you to remember, we do know the information should be there.  Dump again the content of one of the files we have been working with:
+Let's not worry about those right now (we will check them out later) and **pretend there is no analyzer related to extracting the trigger information** at hand.  In fact we do not have an analyzer (yet) that can do what we are about to do: to extract the trigger information directly from the dataset files.  Just for you to remember, we do know the information should be there.  Dump again the content of one of the files we have been working with:
 
 ~~~
 edmDumpEventContent root://eospublic.cern.ch//eos/opendata/cms/mc/RunIIFall15MiniAODv2/TT_TuneCUETP8M1_13TeV-powheg-pythia8/MINIAODSIM/PU25nsData2015v1_76X_mcRun2_asymptotic_v12_ext3-v1/00000/02837459-03C2-E511-8EA2-002590A887AC.root
@@ -145,7 +145,7 @@ Although we do not have such analyzer yet, we know where to find information on 
 
 As you can see, an example is already provided on how to build such an analyzer with its corresponding configuration.
 
-Here's the analyzer example:
+We have copied the analyzer example here for you:
 
 ~~~
 // system include files
@@ -413,7 +413,7 @@ So, we not only get the triggers and their **pass/fail** status, but also the pr
 
 ### Trigger objects
 
-Let's explore the code which prints the last part  to understand what it means.  The HLT is like a reconstruction algorithm capable of identifying particles very very fast.  Therefore, an HLT muon, for example, is a trigger object that has a four momentum.  These trigger objects are associated to, commonly,  the last filter executed by a given path in the HLT.  Usually one want to check whether a given particle that is being used in a given analysis coincides with the trigger object that fired the trigger (this is called **trigger matching**).  We won't go into more details.
+Let's explore the code which prints the last part  to understand what it means.  The HLT is like a reconstruction algorithm capable of identifying particles very very fast.  Therefore, an HLT muon, for example, is a trigger object that has a four momentum.  These trigger objects are associated to, commonly,  the last filter executed by a given path in the HLT.  Usually one wants to check whether a given particle that is being used in a given analysis coincides with the trigger object that fired the trigger (this is called **trigger matching**).  We won't go into more details about that.
 
 ~~~
 std::cout << "\n === TRIGGER OBJECTS === " << std::endl;
