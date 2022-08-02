@@ -156,7 +156,7 @@ process.elemufilter = cms.EDFilter('SimpleEleMuFilter',
 ~~~
 {: .language-python}
 
-Finally, let us just mentioned that instead of the `mytriggers` module (which was commented out), we have set up a simpler trigger retriever called `mysinpletrig` in the `poet_cfg.py`.
+Finally, let us just mention that, instead of the `mytriggers` module (which was commented out), we have set up a simpler trigger retriever called `mysinpletrig` in the `poet_cfg.py`.
 
 {% include links.md %}
 
