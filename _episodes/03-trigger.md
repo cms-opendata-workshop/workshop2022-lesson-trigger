@@ -113,6 +113,8 @@ Explore the code and get ready for the last challenge:
 > > } //------------------- beginRun()
 > > ~~~
 > > {: .language-cpp}
+> >
+> > This is the final [TriggerAnalyzer.cc](https://raw.githubusercontent.com/cms-opendata-analyses/PhysObjectExtractorTool/odws2022-ttbaljets-prod/PhysObjectExtractor/trunk/TriggerAnalyzer.cc_2) file and the [poet_cfg.py](https://github.com/cms-opendata-analyses/PhysObjectExtractorTool/blob/odws2022-ttbaljets-prod/PhysObjectExtractor/trunk/poet_cfg.py_2) config file.
 > {: .solution}
 {: .challenge}
 

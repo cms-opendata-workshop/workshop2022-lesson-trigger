@@ -406,6 +406,8 @@ Now, let's run with `cmsRun python/poet_cfg.py True`.  We will get a lot of prin
 > > ~~~
 > > {: .output}
 > >
+> > Here are the final [MiniAODTriggerAnalyzer.cc](https://raw.githubusercontent.com/cms-opendata-analyses/PhysObjectExtractorTool/odws2022-ttbaljets-prod/PhysObjectExtractor/trunk/MiniAODTriggerAnalyzer.cc_1) and [poet_cfg.py](https://raw.githubusercontent.com/cms-opendata-analyses/PhysObjectExtractorTool/odws2022-ttbaljets-prod/PhysObjectExtractor/trunk/poet_cfg.py_1) files.
+> > 
 > {: .solution}
 {: .challenge}
 
